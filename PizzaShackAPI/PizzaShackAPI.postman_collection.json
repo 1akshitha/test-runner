@@ -330,17 +330,17 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://localhost:8243/pizzashack/1.0.0",
+			"value": "https://localhost:8253/pizzashack/1.0.0",
 			"type": "string"
 		},
 		{
 			"key": "clientId",
-			"value": "MB8efUD6iF9Oepy7VjCOu5WolNUa",
+			"value": "_7SYYf0FOISoiRVonHFaVNqlZ3Ya",
 			"type": "string"
 		},
 		{
 			"key": "clientSecret",
-			"value": "hogUkO3DaIkVRd8glfnRFPqqqhka",
+			"value": "f35fGr92_H4WW02MdOfWQaO1vAoa",
 			"type": "string"
 		},
 		{
