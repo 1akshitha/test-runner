@@ -1,0 +1,12 @@
+environments:
+    - name: dev
+      configs:
+        deploymentEnvironments:
+            - displayOnDevportal: true
+              deploymentEnvironment: Default
+              deploymentVhost : localhost
+            - displayOnDevportal: false
+              deploymentEnvironment: Test
+              deploymentVhost : us.wso2.com
+
+
