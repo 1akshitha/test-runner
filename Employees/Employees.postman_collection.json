@@ -1,0 +1,807 @@
+{
+	"info": {
+		"_postman_id": "44989eec-1517-408d-9bc1-9e9e5403d598",
+		"name": "Employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8434037"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "BrokenObjectLevelAuthentication",
+					"item": [
+						{
+							"name": "Success scenario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{sarahToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/employees/contract/sarah",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										"contract",
+										"sarah"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/contract/:employee-name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												"contract",
+												":employee-name"
+											],
+											"variable": [
+												{
+													"key": "employee-name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Failure Scenario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 403\", function () {",
+											"  pm.response.to.have.status(403);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{sarahToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/employees/contract/jimmy",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										"contract",
+										"jimmy"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/contract/:employee-name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												"contract",
+												":employee-name"
+											],
+											"variable": [
+												{
+													"key": "employee-name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Admin invoke sarah",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/employees/contract/sarah",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										"contract",
+										"sarah"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/contract/:employee-name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												"contract",
+												":employee-name"
+											],
+											"variable": [
+												{
+													"key": "employee-name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Admin invoke jimmy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/employees/contract/jimmy",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										"contract",
+										"jimmy"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/contract/:employee-name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												"contract",
+												":employee-name"
+											],
+											"variable": [
+												{
+													"key": "employee-name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "MassAssignment",
+					"item": [
+						{
+							"name": "Success Scenario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dob\": \"1993-12-05\",\n  \"email\": \"john@er.com\",\n  \"id\": \"empID-234-34-7382\",\n  \"name\": \"john silva\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dob\": \"<date>\",\n  \"email\": \"<email>\",\n  \"id\": \"empID-234-34-7382\",\n  \"name\": \"john\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Failure Scenario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"  pm.response.to.have.status(400);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dob\": \"1993-12-05\",\n  \"email\": \"john@er.com\",\n  \"id\": \"empID-234-34-7382\",\n  \"name\": \"john silva\",\n   \"role\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dob\": \"<date>\",\n  \"email\": \"<email>\",\n  \"id\": \"empID-234-34-7382\",\n  \"name\": \"john\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Injection",
+					"item": [
+						{
+							"name": "Success Scenario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"  pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Sarah\",\n  \"lastName\": \"James\",\n  \"age\": 28,\n  \"email\": \"sarah@abc.com\",\n  \"dob\": \"1993-12-03\",\n  \"roles\": [\n    \"admin\",\n    \"hr_manager\",\n    \"server_admin\"\n  ],\n  \"address\": {\n    \"streetAddress\": \"20, palm grove\",\n    \"city\": \"colombo\",\n    \"postalCode\": \"93000\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/sarah",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"sarah"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"age\": \"<integer>\",\n  \"email\": \"<email>\",\n  \"dob\": \"<date>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"address\": {\n    \"streetAddress\": \"<string>\",\n    \"city\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  },\n  \"phoneNumbers\": [\n    {\n      \"phoneType\": \"<string>\",\n      \"number\": \"<string>\"\n    },\n    {\n      \"phoneType\": \"<string>\",\n      \"number\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/:employee-id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												":employee-id"
+											],
+											"variable": [
+												{
+													"key": "employee-id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Failure Scenario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"  pm.response.to.have.status(400);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Sarah\",\n  \"lastName\": \"James\",\n  \"age\": 28,\n  \"email\": \"sarah@abc.com\",\n  \"dob\": \"1993-12-03\",\n  \"roles\": [\n    \"admin\",\n    \"hr_manager\",\n    \"server_admin\",\n    \"service_manager\",\n    \"account_exacutive\"\n  ],\n  \"address\": {\n    \"streetAddress\": \"20, palm grove\",\n    \"city\": \"colombo\",\n    \"postalCode\": \"93000\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/sarah",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"sarah"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ok",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"age\": \"<integer>\",\n  \"email\": \"<email>\",\n  \"dob\": \"<date>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"address\": {\n    \"streetAddress\": \"<string>\",\n    \"city\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  },\n  \"phoneNumbers\": [\n    {\n      \"phoneType\": \"<string>\",\n      \"number\": \"<string>\"\n    },\n    {\n      \"phoneType\": \"<string>\",\n      \"number\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/:employee-id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												":employee-id"
+											],
+											"variable": [
+												{
+													"key": "employee-id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiXzdTWVlmMEZPSVNvaVJWb25IRmFWTnFsWjNZYSIsIm5iZiI6MTY1NDUwNTkwNywiYXpwIjoiXzdTWVlmMEZPSVNvaVJWb25IRmFWTnFsWjNZYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTY1NDUwOTUwNywiaWF0IjoxNjU0NTA1OTA3LCJqdGkiOiI1YmQ5N2Q5NC0zMTEyLTRiNDAtYjc3My1iYWUwNzQ2MTgzYjgifQ.KM8CEG5TjXo90kuO8haRBc_HWLNBxPbEvhivXUI8h9-3g452bfw6wfOTVs5C0wpJJsJc0sDdnEuEMQuPe9FYeIwyMss4uJNnHBmfuxCN0aP0uCtUBUF3pfjRfy6jjb_risfPWRCRXD9iAFyMTGDT7KVpP32v-cSo5dnXyQ58DexnfLSoZh7kN2QsBbYMeQd3SYJM71lwPOgcRYHeZGaSfZK2Z5NDb9oUvAWq7RgwPD4UtLr6jxCmvUjbLJ7D0n4x2lqVqZ8MnV6WyR5ew1ADiQhZMJfD_2QmAVSWR8sCq_SmUh-R4ZLvEEXo1FV-2t0Q22r6An-8jbso7SFzrFbWAg",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{clientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://localhost:9443/oauth2/token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://dev.gw.apim.com:8253/employees/1.0.0",
+			"type": "string"
+		},
+		{
+			"key": "clientId",
+			"value": "_7SYYf0FOISoiRVonHFaVNqlZ3Ya",
+			"type": "string"
+		},
+		{
+			"key": "clientSecret",
+			"value": "f35fGr92_H4WW02MdOfWQaO1vAoa",
+			"type": "string"
+		},
+		{
+			"key": "sarahToken",
+			"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJzYXJhaCIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiR3ZCUGZhY09vSE9xNU82TllhZk9OQWhYM3RVYSIsIm5iZiI6MTY1NDUwNjQ3NCwiYXpwIjoiR3ZCUGZhY09vSE9xNU82TllhZk9OQWhYM3RVYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsImV4cCI6MTY1NDUxMDA3NCwiaWF0IjoxNjU0NTA2NDc0LCJqdGkiOiIzOGIxZWZiZC0wYmI3LTQyMzctYTMxNi0xNGFlZDRmN2FjYTMifQ.VTcGYmUKQxG9JAzOKnRF9LTIYTQyZ3JHLOsPCgXDf0RWO93icq5QGezFthKFt0GU10niAgHBxBftrG_1vw3-oe1UxyWuyAw5URVbSrYXEQfoMdltUPBb1bFjDwz3kb5wjXlRh7gItxwvxUrWtKfzf6TbNimL4hizD6bs6MePg6jOklXfDBIhgdljs5eA_SN4Ipwxtehd8KsgypsCduRvIcHU4y_6RQdLlj6dS4UGBg84fPT6Qi5qWMkII7nPR8tqGtQJJ6iWXGt6rHjvGOZ_kh7_YqSurA2GCxVAW1kN-9mnypaz2bqgLDNWMybHOY5TVTSlwSlwmNJTJFWU2OrrwA",
+			"type": "string"
+		},
+		{
+			"key": "adminToken",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
